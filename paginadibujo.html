@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Galería de Arte | Venta de Dibujos</title>
+    <style>
+        /* Estilos Globales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #111;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #777;
+            font-style: italic;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Sección Sobre Mí */
+        .about-section {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 1rem;
+        }
+
+        .about-section h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        /* Galería de Dibujos */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .art-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .art-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .art-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover; /* Cambia a 'contain' si no quieres que se recorten tus dibujos */
+            background-color: #eaeaea;
+        }
+
+        .art-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .art-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #222;
+        }
+
+        .art-meta {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 1rem;
+        }
+
+        .art-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+
+        /* Botón de Compra */
+        .btn-buy {
+            display: inline-block;
+            background-color: #111;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.2s;
+            width: 100%;
+        }
+
+        .btn-buy:hover {
+            background-color: #e67e22;
+        }
+
+        /* Sección de Contacto / Encargos */
+        .contact-section {
+            background-color: #ffffff;
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 2rem auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn-submit {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #d35400;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con tu nombre o marca -->
+    <header>
+        <h1>TU NOMBRE ARTÍSTICO</h1>
+        <p>Dibujos originales e ilustraciones disponibles para envío a todo el mundo</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Breve introducción -->
+        <section class="about-section">
+            <h2>Bienvenido a mi tienda de arte</h2>
+            <p>Cada pieza es única, hecha a mano con amor y dedicación. Si buscas un encargo personalizado, puedes escribirme al final de la página.</p>
+        </section>
+
+        <!-- Galería de productos -->
+        <main class="gallery">
+
+            <!-- Dibujo 1 -->
+            <div class="art-card">
+                <!-- Reemplaza 'tu-dibujo1.jpg' por la ruta o link de tu imagen -->
+                <img src="https://via.placeholder.com/400x500" alt="Nombre del dibujo 1" class="art-img">
+                <div class="art-info">
+                    <h3 class="art-title">Atardecer en Tinta</h3>
+                    <p class="art-meta">Tinta china sobre papel de 300g (A4)</p>
+                    <div class="art-price">45€</div>
+                    <!-- Cambia el # por tu link de PayPal o WhatsApp -->
+                    <a href="#" class="btn-buy">Comprar Original</a>
+                </div>
+            </div>
+
+            <!-- Dibujo 2 -->
+            <div class="art-card">
+                <img src="https://via.placeholder.com/400x500" alt="Nombre del dibujo 2" class="art-img">
+                <div class="art-info">
+                    <h3 class="art-title">Mirada de Grafito</h3>
+                    <p class="art-meta">Lápiz de grafito (30x40 cm)</p>
+                    <div class="art-price">60€</div>
+                    <a href="#" class="btn-buy">Comprar Original</a>
+                </div>
+            </div>
+
+            <!-- Dibujo 3 -->
+            <div class="art-card">
+                <img src="https://via.placeholder.com/400x500" alt="Nombre del dibujo 3" class="art-img">
+                <div class="art-info">
+                    <h3 class="art-title">Naturaleza Abstracta</h3>
+                    <p class="art-meta">Acuarela y Estilógrafo (A5)</p>
+                    <div class="art-price">35€</div>
+                    <a href="#" class="btn-buy">Comprar Original</a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Formulario de Contacto para encargos -->
+        <section class="contact-section">
+            <h2>¿Quieres un dibujo personalizado?</h2>
+            <p>Cuéntame tu idea (retratos, paisajes, mascotas...) y te daré un presupuesto sin compromiso.</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/tu-id-de-formspree" method="POST">
+                <input type="text" name="name" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="lllleo28806@gmail.com" required>
+                <textarea name="message" rows="5" placeholder="¿Cómo te gustaría que fuera tu dibujo?" required></textarea>
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Tu Nombre Artístico. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
